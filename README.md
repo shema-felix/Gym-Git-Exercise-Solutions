@@ -120,4 +120,49 @@ To https://github.com/shema-felix/Gym-Git-Exercise-Solutions.git
 branch 'main' set up to track 'origin/main'.
 
 HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ ^C
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git branch dev
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git branch
+  dev
+* main
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git switch dev
+Switched to branch 'dev'
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (dev)
+$ git branch
+* dev
+  main
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (dev)
+$ git branch test
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (dev)
+$ git branch
+* dev
+  main
+  test
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (dev)
+$ git branch --delete test
+Deleted branch test (was 2f9d666).
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (dev)
+$ git branch
+* dev
+  main
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (dev)
 $
