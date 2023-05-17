@@ -166,3 +166,114 @@ $ git branch
 
 HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (dev)
 $
+  
+  ## bundle 2 exercise 1
+  
+  
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git branch ft/bundle-2
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git branch
+  dev
+  ft/bundle-2
+* main
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git switch ft/bundle-2
+Switched to branch 'ft/bundle-2'
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/bundle-2)
+$ git add .
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   services.html
+
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/bundle-2)
+$ git commit -m "first commit by adding a paragraph"
+[ft/bundle-2 2283721] first commit by adding a paragraph
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/bundle-2)
+$ git add services.html
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   services.html
+
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/bundle-2)
+$ git commit -m "second commit on new branch"
+[ft/bundle-2 79028d1] second commit on new branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/bundle-2)
+$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/bundle-2)
+$ git push --set-upstream origin ft/bundle-2
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 842 bytes | 93.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/shema-felix/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/shema-felix/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/bundle-2)
+$
+  ####
