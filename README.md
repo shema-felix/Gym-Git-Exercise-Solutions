@@ -862,3 +862,140 @@ branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
 HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/faq-page)
 $
   #####
+  #bundle 3
+  
+  #exercise2
+  
+  
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/faq-page)
+$ git switch -c ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git pull
+Updating 5319a1f..e796447
+Fast-forward
+ README.md     | 453 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ services.html |   9 +-
+ team.html     |   2 +-
+ 3 files changed, 462 insertions(+), 2 deletions(-)
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        faq.html
+
+nothing added to commit but untracked files present (use "git add" to track)        
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git rebase main
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   faq.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git add .
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git commit -m "sixth commit"
+[ft/home-page-redesign 9d5fe91] sixth commit
+ 1 file changed, 1 insertion(+)
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git rebase main
+Current branch ft/home-page-redesign is up to date.
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git add .
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   home.html
+
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git commit -m "7th commit after rebase"
+[ft/home-page-redesign 5c99a28] 7th commit after rebase
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 1.16 KiB | 396.00 KiB/s, done.
+Total 12 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:    
+remote:      https://github.com/shema-felix/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/shema-felix/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+HP@DESKTOP-3RRG9G3 MINGW64 ~/Desktop/gym (ft/home-page-redesign)
+$
+  #####
